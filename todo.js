@@ -7,9 +7,11 @@ const todoList = () => {
   const add = (todoItem) => {
     all.push(todoItem);
   };
+
   const markAsComplete = (index) => {
     all[index].completed = true;
   };
+
   const overdue = () => {
     return all.filter(
       (item) => item.dueDate < new Date().toLocaleDateString("en-CA")
